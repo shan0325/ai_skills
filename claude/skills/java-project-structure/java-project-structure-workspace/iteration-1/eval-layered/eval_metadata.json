@@ -1,0 +1,23 @@
+{
+  "eval_id": 2,
+  "eval_name": "eval-layered",
+  "prompt": "기존 Spring Boot 프로젝트에 레이어드 아키텍처로 패키지 구조 만들어줘. group은 com.example 이고 artifact는 todoapp 이야. 예시 파일은 필요없어.",
+  "assertions": [
+    {
+      "name": "Layered 구조 포함",
+      "check": "controller/, service/, service/impl/, repository/, domain/entity/, dto/request/, dto/response/, config/ 경로가 응답에 포함되어 있다"
+    },
+    {
+      "name": "예시 파일 미생성",
+      "check": "사용자가 예시 파일 불필요하다고 했으므로 Java 파일을 생성하거나 자세한 코드를 보여주지 않는다"
+    },
+    {
+      "name": "올바른 base package",
+      "check": "com.example.todoapp 패키지 경로가 구조에 반영되어 있다"
+    },
+    {
+      "name": ".gitkeep 또는 디렉토리 생성 언급",
+      "check": "빈 디렉토리를 .gitkeep으로 관리하거나 디렉토리를 실제로 생성한다는 내용이 있다"
+    }
+  ]
+}

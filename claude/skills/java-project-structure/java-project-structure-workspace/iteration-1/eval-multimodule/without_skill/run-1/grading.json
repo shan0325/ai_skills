@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "멀티모듈 구조 포함",
+      "passed": true,
+      "evidence": "commerce-common, commerce-product, commerce-payment, commerce-bootstrap 4개 모듈 포함. 단, SKILL.md의 layer-per-module(domain/application/infra/api)이 아닌 domain-per-module 방식으로 구성됨"
+    },
+    {
+      "text": "settings.gradle 내용 포함",
+      "passed": true,
+      "evidence": "에이전트 요약에 settings.gradle 파일 내용이 포함된다고 명시됨"
+    },
+    {
+      "text": "product, payment 두 도메인 반영",
+      "passed": true,
+      "evidence": "commerce-product, commerce-payment 모듈로 두 도메인이 분리됨"
+    },
+    {
+      "text": "DDD+Hexagonal 계층 포함",
+      "passed": true,
+      "evidence": "각 도메인 모듈 내에 domain/, application/port/in,out/, adapter/ 계층이 포함됨"
+    },
+    {
+      "text": "Gradle 설정 파일 생성 또는 내용 제시",
+      "passed": true,
+      "evidence": "에이전트 요약: settings.gradle, build.gradle 전체 설정 포함"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 126.7,
+    "total_duration_seconds": 126.7
+  },
+  "claims": [
+    {
+      "claim": "domain-per-module 방식 사용 (SKILL.md의 layer-per-module과 다름)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "commerce-product, commerce-payment 모듈 구조 — SKILL.md는 commerce-domain, commerce-application, commerce-infrastructure, commerce-api 레이어별 분리를 권장하지만 baseline은 다른 방식 채택"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "모듈 분리 방식(layer-per-module vs domain-per-module)을 검증하는 assertion 추가 시 baseline과 with_skill의 차이가 더 명확해짐"
+      }
+    ],
+    "overall": "5/5 통과지만 assertions이 모듈 분리 전략의 차이를 잡아내지 못함. 모듈명 패턴 검증 assertion 추가 권장"
+  }
+}

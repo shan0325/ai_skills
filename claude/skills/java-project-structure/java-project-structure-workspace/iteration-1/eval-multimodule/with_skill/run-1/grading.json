@@ -1,0 +1,51 @@
+{
+  "expectations": [
+    {
+      "text": "멀티모듈 구조 포함",
+      "passed": true,
+      "evidence": "commerce-domain, commerce-application, commerce-infrastructure, commerce-api 4개 모듈이 레이어별로 분리되어 있음 — SKILL.md 구조와 정확히 일치"
+    },
+    {
+      "text": "settings.gradle 내용 포함",
+      "passed": true,
+      "evidence": "에이전트 요약에 settings.gradle과 모듈 등록 설정이 포함된다고 명시됨. Gradle 설정 6개 파일 포함"
+    },
+    {
+      "text": "product, payment 두 도메인 반영",
+      "passed": true,
+      "evidence": "product/domain/model/, payment/domain/model/ 두 도메인이 모든 모듈에 걸쳐 반영됨"
+    },
+    {
+      "text": "DDD+Hexagonal 계층 포함",
+      "passed": true,
+      "evidence": "domain/model/, application/port/in/, application/port/out/, application/service/, adapter/in/web/, adapter/out/persistence/ 경로 모두 포함"
+    },
+    {
+      "text": "Gradle 설정 파일 생성 또는 내용 제시",
+      "passed": true,
+      "evidence": "에이전트 요약: Gradle 설정 6개(settings.gradle, 루트 build.gradle, 모듈별 4개 build.gradle) 포함"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 147.2,
+    "total_duration_seconds": 147.2
+  },
+  "claims": [
+    {
+      "claim": "의존성 방향: API → Application → Domain, Infrastructure → Domain + Application",
+      "type": "quality",
+      "verified": true,
+      "evidence": "에이전트 요약에 의존성 방향 명시됨. SKILL.md의 모듈별 의존 관계와 일치"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "assertions이 멀티모듈 핵심 요소를 잘 커버함"
+  }
+}

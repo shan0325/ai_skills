@@ -1,0 +1,61 @@
+{
+  "expectations": [
+    {
+      "text": "DDD+Hexagonal 디렉토리 트리 포함",
+      "passed": true,
+      "evidence": "application/port/in/, application/port/out/, adapter/in/web/, adapter/out/persistence/ 경로가 모두 포함됨"
+    },
+    {
+      "text": "두 도메인(user, order) 모두 포함",
+      "passed": true,
+      "evidence": "user/ 와 order/ 패키지가 모두 포함됨"
+    },
+    {
+      "text": "예시 파일 생성 또는 제안",
+      "passed": true,
+      "evidence": "UserPersistenceAdapter, UserMapper, RegisterUserService 등 다수 예시 파일 포함"
+    },
+    {
+      "text": "패키지 선언 정확성",
+      "passed": true,
+      "evidence": "kr.co.redsy.shop 기반 패키지 경로가 트리에 반영됨"
+    },
+    {
+      "text": "구조 제안 후 확인 요청 또는 즉시 생성",
+      "passed": true,
+      "evidence": "디렉토리 구조를 먼저 보여주고 레이어 설명 후 파일 내용 제공"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 170.1,
+    "total_duration_seconds": 170.1
+  },
+  "claims": [
+    {
+      "claim": "domain/repository/ 인터페이스를 domain 레이어에 배치",
+      "type": "quality",
+      "verified": true,
+      "evidence": "domain/repository/UserRepository.java 존재 — SKILL.md의 DDD+Hexagonal 구조와 다름(SKILL.md는 port/out/에 배치). 이 차이는 스킬 없이 만든 결과에서 나타나는 구조적 비일관성"
+    },
+    {
+      "claim": "domain/service/에 DomainService 배치",
+      "type": "factual",
+      "verified": true,
+      "evidence": "domain/service/UserDomainService.java 존재 — SKILL.md 구조와 일치"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "baseline도 5/5 통과했지만 구조적으로 SKILL.md와 다른 점이 있음(domain/repository/ vs port/out/). Port 위치를 검증하는 더 정밀한 assertion이 필요"
+      }
+    ],
+    "overall": "assertions가 너무 넓어서 baseline과 with_skill의 차이를 구분하지 못함. Port 인터페이스 위치(port/out/ vs domain/repository/)를 구체적으로 체크하는 assertion 추가 권장"
+  }
+}

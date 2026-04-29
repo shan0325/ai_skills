@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "Layered 구조 포함",
+      "passed": false,
+      "evidence": "controller/, service/impl/, repository/ 는 있으나 domain/entity/ 대신 domain/만 있고, entity/ 서브패키지 없음. 또한 SKILL.md에 없는 exception/handler/ 패키지가 추가됨"
+    },
+    {
+      "text": "예시 파일 미생성",
+      "passed": true,
+      "evidence": "Java 코드 없이 패키지 트리와 설명만 제공"
+    },
+    {
+      "text": "올바른 base package",
+      "passed": true,
+      "evidence": "com.example.todoapp 경로가 트리에 반영됨"
+    },
+    {
+      "text": ".gitkeep 또는 디렉토리 생성 언급",
+      "passed": false,
+      "evidence": ".gitkeep에 대한 언급 없음. 빈 디렉토리 관리 방법을 제시하지 않음"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  },
+  "timing": {
+    "executor_duration_seconds": 29.1,
+    "total_duration_seconds": 29.1
+  },
+  "claims": [
+    {
+      "claim": "domain/ 아래에 entity/ 서브패키지 없이 평탄하게 구성",
+      "type": "factual",
+      "verified": true,
+      "evidence": "SKILL.md는 domain/entity/를 명시하지만 baseline은 domain/ 단독 사용 — 구조적 차이"
+    },
+    {
+      "claim": "스킬 미사용으로 exception/handler/ 등 스킬 정의에 없는 패키지 추가",
+      "type": "quality",
+      "verified": true,
+      "evidence": "exception/, exception/handler/ 패키지가 Layered 구조에 추가됨 — 일관성은 있지만 SKILL.md 표준과 다름"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "baseline이 2/4만 통과 — 스킬의 차별점이 명확히 드러남(entity/ 서브패키지, .gitkeep 관리)"
+  }
+}

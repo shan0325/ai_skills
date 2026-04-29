@@ -1,0 +1,61 @@
+{
+  "expectations": [
+    {
+      "text": "DDD+Hexagonal 디렉토리 트리 포함",
+      "passed": true,
+      "evidence": "domain/, application/port/in/, application/port/out/, application/service/, adapter/in/web/, adapter/out/persistence/ 경로가 user와 order 도메인 모두에 완전히 포함됨"
+    },
+    {
+      "text": "두 도메인(user, order) 모두 포함",
+      "passed": true,
+      "evidence": "user/ 와 order/ 패키지가 모두 표현됨. user에 CreateUserUseCase, order에 CreateOrderUseCase 등 도메인별 구조가 완전히 분리됨"
+    },
+    {
+      "text": "예시 파일 생성 또는 제안",
+      "passed": true,
+      "evidence": "에이전트 요약에 따르면 총 37개 Java 파일 포함: UseCase 인터페이스, Port 인터페이스, Service, Controller, PersistenceAdapter, JPA Entity, JPA Repository 등"
+    },
+    {
+      "text": "패키지 선언 정확성",
+      "passed": true,
+      "evidence": "정보 테이블에 Base Package: kr.co.redsy.shop 명시되어 있으며, 트리에도 kr/co/redsy/shop/ 경로 정확히 반영됨"
+    },
+    {
+      "text": "구조 제안 후 확인 요청 또는 즉시 생성",
+      "passed": true,
+      "evidence": "디렉토리 트리를 먼저 보여준 후 파일 생성, 생성 완료 후 파일 목록 요약 제공 — SKILL.md의 Step 3→4 흐름 준수"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 126.2,
+    "total_duration_seconds": 126.2
+  },
+  "claims": [
+    {
+      "claim": "SKILL.md의 DDD+Hexagonal 조합 구조를 정확히 따름",
+      "type": "quality",
+      "verified": true,
+      "evidence": "adapter/out/persistence/에 @Entity 위치, domain/model/은 순수 Java, Application Service는 package-private 선언 — SKILL.md 핵심 원칙 준수"
+    },
+    {
+      "claim": "common/ 패키지(exception, config) 포함",
+      "type": "factual",
+      "verified": true,
+      "evidence": "트리에 common/exception/, common/config/ 포함됨"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "도메인 모델이 프레임워크 의존성 없이 순수 Java로 작성됐는지 확인하는 assertion 추가 권장 (현재는 구조만 체크)"
+      }
+    ],
+    "overall": "assertions가 구조 존재 여부를 잘 체크하고 있음. 코드 품질(도메인 순수성) 검증 assertion 추가 시 더 강력해짐"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "metadata": {
+    "skill_name": "java-project-structure",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-04-29T01:25:05Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 126.2,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "DDD+Hexagonal \ub514\ub809\ud1a0\ub9ac \ud2b8\ub9ac \ud3ec\ud568",
+          "passed": true,
+          "evidence": "domain/, application/port/in/, application/port/out/, application/service/, adapter/in/web/, adapter/out/persistence/ \uacbd\ub85c\uac00 user\uc640 order \ub3c4\uba54\uc778 \ubaa8\ub450\uc5d0 \uc644\uc804\ud788 \ud3ec\ud568\ub428"
+        },
+        {
+          "text": "\ub450 \ub3c4\uba54\uc778(user, order) \ubaa8\ub450 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "user/ \uc640 order/ \ud328\ud0a4\uc9c0\uac00 \ubaa8\ub450 \ud45c\ud604\ub428. user\uc5d0 CreateUserUseCase, order\uc5d0 CreateOrderUseCase \ub4f1 \ub3c4\uba54\uc778\ubcc4 \uad6c\uc870\uac00 \uc644\uc804\ud788 \ubd84\ub9ac\ub428"
+        },
+        {
+          "text": "\uc608\uc2dc \ud30c\uc77c \uc0dd\uc131 \ub610\ub294 \uc81c\uc548",
+          "passed": true,
+          "evidence": "\uc5d0\uc774\uc804\ud2b8 \uc694\uc57d\uc5d0 \ub530\ub974\uba74 \ucd1d 37\uac1c Java \ud30c\uc77c \ud3ec\ud568: UseCase \uc778\ud130\ud398\uc774\uc2a4, Port \uc778\ud130\ud398\uc774\uc2a4, Service, Controller, PersistenceAdapter, JPA Entity, JPA Repository \ub4f1"
+        },
+        {
+          "text": "\ud328\ud0a4\uc9c0 \uc120\uc5b8 \uc815\ud655\uc131",
+          "passed": true,
+          "evidence": "\uc815\ubcf4 \ud14c\uc774\ube14\uc5d0 Base Package: kr.co.redsy.shop \uba85\uc2dc\ub418\uc5b4 \uc788\uc73c\uba70, \ud2b8\ub9ac\uc5d0\ub3c4 kr/co/redsy/shop/ \uacbd\ub85c \uc815\ud655\ud788 \ubc18\uc601\ub428"
+        },
+        {
+          "text": "\uad6c\uc870 \uc81c\uc548 \ud6c4 \ud655\uc778 \uc694\uccad \ub610\ub294 \uc989\uc2dc \uc0dd\uc131",
+          "passed": true,
+          "evidence": "\ub514\ub809\ud1a0\ub9ac \ud2b8\ub9ac\ub97c \uba3c\uc800 \ubcf4\uc5ec\uc900 \ud6c4 \ud30c\uc77c \uc0dd\uc131, \uc0dd\uc131 \uc644\ub8cc \ud6c4 \ud30c\uc77c \ubaa9\ub85d \uc694\uc57d \uc81c\uacf5 \u2014 SKILL.md\uc758 Step 3\u21924 \ud750\ub984 \uc900\uc218"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 35.9,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Layered \uad6c\uc870 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "controller/, service/, service/impl/, repository/, domain/entity/, dto/request/, dto/response/, config/ \ubaa8\ub450 \ud3ec\ud568\ub428"
+        },
+        {
+          "text": "\uc608\uc2dc \ud30c\uc77c \ubbf8\uc0dd\uc131",
+          "passed": true,
+          "evidence": "'\uc608\uc2dc \ud30c\uc77c\uc740 \uc0dd\uc131\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uac01 \ub514\ub809\ud1a0\ub9ac\uc5d0 .gitkeep \ud30c\uc77c\uc744 \ucd94\uac00\ud558\uc5ec Git\uc5d0\uc11c \ube48 \ub514\ub809\ud1a0\ub9ac\ub97c \ucd94\uc801\ud569\ub2c8\ub2e4.' \uba85\uc2dc\ub428"
+        },
+        {
+          "text": "\uc62c\ubc14\ub978 base package",
+          "passed": true,
+          "evidence": "com.example.todoapp \uacbd\ub85c\uac00 \uad6c\uc870\uc5d0 \uc815\ud655\ud788 \ubc18\uc601\ub428"
+        },
+        {
+          "text": ".gitkeep \ub610\ub294 \ub514\ub809\ud1a0\ub9ac \uc0dd\uc131 \uc5b8\uae09",
+          "passed": true,
+          "evidence": ".gitkeep \ud30c\uc77c \ubaa9\ub85d\uc774 \uba85\uc2dc\uc801\uc73c\ub85c \ub098\uc5f4\ub428: controller/.gitkeep, service/.gitkeep \ub4f1 8\uac1c"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 147.2,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "\uba40\ud2f0\ubaa8\ub4c8 \uad6c\uc870 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "commerce-domain, commerce-application, commerce-infrastructure, commerce-api 4\uac1c \ubaa8\ub4c8\uc774 \ub808\uc774\uc5b4\ubcc4\ub85c \ubd84\ub9ac\ub418\uc5b4 \uc788\uc74c \u2014 SKILL.md \uad6c\uc870\uc640 \uc815\ud655\ud788 \uc77c\uce58"
+        },
+        {
+          "text": "settings.gradle \ub0b4\uc6a9 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "\uc5d0\uc774\uc804\ud2b8 \uc694\uc57d\uc5d0 settings.gradle\uacfc \ubaa8\ub4c8 \ub4f1\ub85d \uc124\uc815\uc774 \ud3ec\ud568\ub41c\ub2e4\uace0 \uba85\uc2dc\ub428. Gradle \uc124\uc815 6\uac1c \ud30c\uc77c \ud3ec\ud568"
+        },
+        {
+          "text": "product, payment \ub450 \ub3c4\uba54\uc778 \ubc18\uc601",
+          "passed": true,
+          "evidence": "product/domain/model/, payment/domain/model/ \ub450 \ub3c4\uba54\uc778\uc774 \ubaa8\ub4e0 \ubaa8\ub4c8\uc5d0 \uac78\uccd0 \ubc18\uc601\ub428"
+        },
+        {
+          "text": "DDD+Hexagonal \uacc4\uce35 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "domain/model/, application/port/in/, application/port/out/, application/service/, adapter/in/web/, adapter/out/persistence/ \uacbd\ub85c \ubaa8\ub450 \ud3ec\ud568"
+        },
+        {
+          "text": "Gradle \uc124\uc815 \ud30c\uc77c \uc0dd\uc131 \ub610\ub294 \ub0b4\uc6a9 \uc81c\uc2dc",
+          "passed": true,
+          "evidence": "\uc5d0\uc774\uc804\ud2b8 \uc694\uc57d: Gradle \uc124\uc815 6\uac1c(settings.gradle, \ub8e8\ud2b8 build.gradle, \ubaa8\ub4c8\ubcc4 4\uac1c build.gradle) \ud3ec\ud568"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 170.1,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "DDD+Hexagonal \ub514\ub809\ud1a0\ub9ac \ud2b8\ub9ac \ud3ec\ud568",
+          "passed": true,
+          "evidence": "application/port/in/, application/port/out/, adapter/in/web/, adapter/out/persistence/ \uacbd\ub85c\uac00 \ubaa8\ub450 \ud3ec\ud568\ub428"
+        },
+        {
+          "text": "\ub450 \ub3c4\uba54\uc778(user, order) \ubaa8\ub450 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "user/ \uc640 order/ \ud328\ud0a4\uc9c0\uac00 \ubaa8\ub450 \ud3ec\ud568\ub428"
+        },
+        {
+          "text": "\uc608\uc2dc \ud30c\uc77c \uc0dd\uc131 \ub610\ub294 \uc81c\uc548",
+          "passed": true,
+          "evidence": "UserPersistenceAdapter, UserMapper, RegisterUserService \ub4f1 \ub2e4\uc218 \uc608\uc2dc \ud30c\uc77c \ud3ec\ud568"
+        },
+        {
+          "text": "\ud328\ud0a4\uc9c0 \uc120\uc5b8 \uc815\ud655\uc131",
+          "passed": true,
+          "evidence": "kr.co.redsy.shop \uae30\ubc18 \ud328\ud0a4\uc9c0 \uacbd\ub85c\uac00 \ud2b8\ub9ac\uc5d0 \ubc18\uc601\ub428"
+        },
+        {
+          "text": "\uad6c\uc870 \uc81c\uc548 \ud6c4 \ud655\uc778 \uc694\uccad \ub610\ub294 \uc989\uc2dc \uc0dd\uc131",
+          "passed": true,
+          "evidence": "\ub514\ub809\ud1a0\ub9ac \uad6c\uc870\ub97c \uba3c\uc800 \ubcf4\uc5ec\uc8fc\uace0 \ub808\uc774\uc5b4 \uc124\uba85 \ud6c4 \ud30c\uc77c \ub0b4\uc6a9 \uc81c\uacf5"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "time_seconds": 29.1,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Layered \uad6c\uc870 \ud3ec\ud568",
+          "passed": false,
+          "evidence": "controller/, service/impl/, repository/ \ub294 \uc788\uc73c\ub098 domain/entity/ \ub300\uc2e0 domain/\ub9cc \uc788\uace0, entity/ \uc11c\ube0c\ud328\ud0a4\uc9c0 \uc5c6\uc74c. \ub610\ud55c SKILL.md\uc5d0 \uc5c6\ub294 exception/handler/ \ud328\ud0a4\uc9c0\uac00 \ucd94\uac00\ub428"
+        },
+        {
+          "text": "\uc608\uc2dc \ud30c\uc77c \ubbf8\uc0dd\uc131",
+          "passed": true,
+          "evidence": "Java \ucf54\ub4dc \uc5c6\uc774 \ud328\ud0a4\uc9c0 \ud2b8\ub9ac\uc640 \uc124\uba85\ub9cc \uc81c\uacf5"
+        },
+        {
+          "text": "\uc62c\ubc14\ub978 base package",
+          "passed": true,
+          "evidence": "com.example.todoapp \uacbd\ub85c\uac00 \ud2b8\ub9ac\uc5d0 \ubc18\uc601\ub428"
+        },
+        {
+          "text": ".gitkeep \ub610\ub294 \ub514\ub809\ud1a0\ub9ac \uc0dd\uc131 \uc5b8\uae09",
+          "passed": false,
+          "evidence": ".gitkeep\uc5d0 \ub300\ud55c \uc5b8\uae09 \uc5c6\uc74c. \ube48 \ub514\ub809\ud1a0\ub9ac \uad00\ub9ac \ubc29\ubc95\uc744 \uc81c\uc2dc\ud558\uc9c0 \uc54a\uc74c"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 126.7,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "\uba40\ud2f0\ubaa8\ub4c8 \uad6c\uc870 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "commerce-common, commerce-product, commerce-payment, commerce-bootstrap 4\uac1c \ubaa8\ub4c8 \ud3ec\ud568. \ub2e8, SKILL.md\uc758 layer-per-module(domain/application/infra/api)\uc774 \uc544\ub2cc domain-per-module \ubc29\uc2dd\uc73c\ub85c \uad6c\uc131\ub428"
+        },
+        {
+          "text": "settings.gradle \ub0b4\uc6a9 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "\uc5d0\uc774\uc804\ud2b8 \uc694\uc57d\uc5d0 settings.gradle \ud30c\uc77c \ub0b4\uc6a9\uc774 \ud3ec\ud568\ub41c\ub2e4\uace0 \uba85\uc2dc\ub428"
+        },
+        {
+          "text": "product, payment \ub450 \ub3c4\uba54\uc778 \ubc18\uc601",
+          "passed": true,
+          "evidence": "commerce-product, commerce-payment \ubaa8\ub4c8\ub85c \ub450 \ub3c4\uba54\uc778\uc774 \ubd84\ub9ac\ub428"
+        },
+        {
+          "text": "DDD+Hexagonal \uacc4\uce35 \ud3ec\ud568",
+          "passed": true,
+          "evidence": "\uac01 \ub3c4\uba54\uc778 \ubaa8\ub4c8 \ub0b4\uc5d0 domain/, application/port/in,out/, adapter/ \uacc4\uce35\uc774 \ud3ec\ud568\ub428"
+        },
+        {
+          "text": "Gradle \uc124\uc815 \ud30c\uc77c \uc0dd\uc131 \ub610\ub294 \ub0b4\uc6a9 \uc81c\uc2dc",
+          "passed": true,
+          "evidence": "\uc5d0\uc774\uc804\ud2b8 \uc694\uc57d: settings.gradle, build.gradle \uc804\uccb4 \uc124\uc815 \ud3ec\ud568"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 103.1,
+        "stddev": 59.1365,
+        "min": 35.9,
+        "max": 147.2
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.8333,
+        "stddev": 0.2887,
+        "min": 0.5,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 108.6333,
+        "stddev": 72.2153,
+        "min": 29.1,
+        "max": 170.1
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.17",
+      "time_seconds": "-5.5",
+      "tokens": "+0"
+    }
+  },
+  "notes": []
+}

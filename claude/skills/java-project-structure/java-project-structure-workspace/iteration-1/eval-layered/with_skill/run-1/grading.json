@@ -1,0 +1,46 @@
+{
+  "expectations": [
+    {
+      "text": "Layered 구조 포함",
+      "passed": true,
+      "evidence": "controller/, service/, service/impl/, repository/, domain/entity/, dto/request/, dto/response/, config/ 모두 포함됨"
+    },
+    {
+      "text": "예시 파일 미생성",
+      "passed": true,
+      "evidence": "'예시 파일은 생성하지 않습니다. 각 디렉토리에 .gitkeep 파일을 추가하여 Git에서 빈 디렉토리를 추적합니다.' 명시됨"
+    },
+    {
+      "text": "올바른 base package",
+      "passed": true,
+      "evidence": "com.example.todoapp 경로가 구조에 정확히 반영됨"
+    },
+    {
+      "text": ".gitkeep 또는 디렉토리 생성 언급",
+      "passed": true,
+      "evidence": ".gitkeep 파일 목록이 명시적으로 나열됨: controller/.gitkeep, service/.gitkeep 등 8개"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 35.9,
+    "total_duration_seconds": 35.9
+  },
+  "claims": [
+    {
+      "claim": "SKILL.md의 정확한 Layered 구조를 그대로 사용",
+      "type": "quality",
+      "verified": true,
+      "evidence": "domain/entity/ (entity 서브패키지 포함), dto/request/, dto/response/ — SKILL.md 구조와 정확히 일치"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "assertions이 적절하고 명확함. with_skill이 SKILL.md 구조를 정확히 따르는지 잘 검증함"
+  }
+}

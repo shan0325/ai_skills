@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "eval-ddd-hexagonal",
+  "prompt": "Spring Boot 프로젝트 새로 시작하려고 해. base package는 kr.co.redsy.shop 이고, 도메인은 user랑 order 두 개야. DDD랑 헥사고날 아키텍처 조합으로 구조 잡아줘. Gradle 써. 예시 파일도 만들어줘.",
+  "assertions": [
+    {
+      "name": "DDD+Hexagonal 디렉토리 트리 포함",
+      "check": "응답에 domain/, application/port/in/, application/port/out/, application/service/, adapter/in/web/, adapter/out/persistence/ 경로가 모두 포함되어 있다"
+    },
+    {
+      "name": "두 도메인(user, order) 모두 포함",
+      "check": "user/ 와 order/ 두 도메인 패키지가 구조에 모두 표현되어 있다"
+    },
+    {
+      "name": "예시 파일 생성 또는 제안",
+      "check": "UseCase 인터페이스, Port 인터페이스, Service, Controller, PersistenceAdapter 중 적어도 3개 이상의 예시 파일을 생성하거나 내용을 보여준다"
+    },
+    {
+      "name": "패키지 선언 정확성",
+      "check": "생성된 Java 파일에 kr.co.redsy.shop 기반의 정확한 package 선언이 포함되어 있다"
+    },
+    {
+      "name": "구조 제안 후 확인 요청 또는 즉시 생성",
+      "check": "디렉토리 트리를 먼저 보여주는 흐름이 있거나, 생성 완료 후 결과를 요약한다"
+    }
+  ]
+}

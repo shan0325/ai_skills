@@ -1,0 +1,23 @@
+{
+  "skill_name": "java-project-structure",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Spring Boot 프로젝트 새로 시작하려고 해. base package는 kr.co.redsy.shop 이고, 도메인은 user랑 order 두 개야. DDD랑 헥사고날 아키텍처 조합으로 구조 잡아줘. Gradle 써. 예시 파일도 만들어줘.",
+      "expected_output": "DDD + Hexagonal 조합 디렉토리 트리 제안 (user, order 두 도메인, domain/application/port/in,out/service/adapter/in/web,out/persistence 구조), 확인 후 실제 디렉토리와 .gitkeep 파일 생성, 예시 Java 파일 생성 (Use Case 인터페이스, Port 인터페이스, Service 구현체, Controller, Persistence Adapter, 도메인 모델)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "기존 Spring Boot 프로젝트에 레이어드 아키텍처로 패키지 구조 만들어줘. group은 com.example 이고 artifact는 todoapp 이야. 예시 파일은 필요없어.",
+      "expected_output": "Layered 아키텍처 디렉토리 트리 제안 (controller, service/impl, repository, domain/entity, dto/request,response, config), 확인 후 디렉토리와 .gitkeep 파일만 생성 (예시 파일 없음)",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "멀티모듈 + DDD + 헥사고날 조합으로 Java 프로젝트 구조 잡고 싶어. 프로젝트 이름은 commerce, base package는 kr.co.myshop, 도메인은 product랑 payment야. Gradle 멀티모듈이고 예시 파일도 포함해줘.",
+      "expected_output": "Multi-module + DDD + Hexagonal 조합 구조 제안: settings.gradle에 commerce-domain, commerce-application, commerce-infrastructure, commerce-api 모듈 포함, 각 모듈별 build.gradle 설정, product/payment 두 도메인에 맞는 패키지 구조, 예시 파일 생성",
+      "files": []
+    }
+  ]
+}

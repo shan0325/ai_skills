@@ -1,0 +1,27 @@
+{
+  "eval_id": 3,
+  "eval_name": "eval-multimodule",
+  "prompt": "멀티모듈 + DDD + 헥사고날 조합으로 Java 프로젝트 구조 잡고 싶어. 프로젝트 이름은 commerce, base package는 kr.co.myshop, 도메인은 product랑 payment야. Gradle 멀티모듈이고 예시 파일도 포함해줘.",
+  "assertions": [
+    {
+      "name": "멀티모듈 구조 포함",
+      "check": "commerce-domain, commerce-application, commerce-infrastructure, commerce-api (또는 유사한 모듈명) 구조가 포함되어 있다"
+    },
+    {
+      "name": "settings.gradle 내용 포함",
+      "check": "settings.gradle 파일 내용 또는 모듈 등록 설정이 응답에 포함되어 있다"
+    },
+    {
+      "name": "product, payment 두 도메인 반영",
+      "check": "product와 payment 두 도메인이 패키지 구조에 반영되어 있다"
+    },
+    {
+      "name": "DDD+Hexagonal 계층 포함",
+      "check": "domain, application/port, adapter 계층이 모듈 내부 구조에 포함되어 있다"
+    },
+    {
+      "name": "Gradle 설정 파일 생성 또는 내용 제시",
+      "check": "루트 build.gradle 또는 모듈별 build.gradle 내용을 보여준다"
+    }
+  ]
+}
