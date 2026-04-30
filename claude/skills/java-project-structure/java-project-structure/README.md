@@ -4,11 +4,38 @@ Claude Code 스킬 — Java/Spring Boot 프로젝트의 패키지 구조를 대�
 
 ## 설치
 
-`SKILL.md` 파일을 Claude Code 스킬 디렉토리에 배치합니다.
+### 방법 1 — git clone (권장)
 
+```bash
+git clone https://github.com/your-repo/java-project-structure.git
+mkdir -p ~/.claude/skills/java-project-structure
+cp java-project-structure/SKILL.md ~/.claude/skills/java-project-structure/
 ```
-~/.claude/skills/java-project-structure/SKILL.md
+
+Windows (PowerShell):
+```powershell
+git clone https://github.com/your-repo/java-project-structure.git
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\java-project-structure"
+Copy-Item "java-project-structure\SKILL.md" "$env:USERPROFILE\.claude\skills\java-project-structure\"
 ```
+
+### 방법 2 — 수동 설치
+
+`SKILL.md` 파일을 아래 경로에 직접 배치합니다.
+
+| OS | 경로 |
+|----|------|
+| macOS / Linux | `~/.claude/skills/java-project-structure/SKILL.md` |
+| Windows | `%USERPROFILE%\.claude\skills\java-project-structure\SKILL.md` |
+
+### 설치 범위
+
+| 설치 위치 | 범위 |
+|-----------|------|
+| `~/.claude/skills/` | **전역** — 모든 프로젝트에서 사용 가능 |
+| `{프로젝트}/.claude/skills/` | **프로젝트 한정** — 해당 프로젝트에서만 사용 가능 |
+
+설치 후 Claude Code를 재시작하면 바로 사용할 수 있습니다.
 
 ## 사용법
 
